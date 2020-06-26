@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>Food and Travel</title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,html {height: 100%;font-family: Arial, Helvetica, sans-serif; margin:0}
+* {box-sizing: border-box}
+
+.bg-image {
+  /* The image used */
+  background-image: url("images/mauritius.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
+  /* Full height */
+  height: 20%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+  /* Position text in the middle of the page/image ------------Title of page------------------*/
+.bgtext {
+  color: rgb(120, 66, 248);
+  font-weight: bold;
+  position: absolute;
+  top: -4%;
+  left: 5%;
+  transform: translate(-5%, -5%);
+  text-align: left;
+}
+
+/* navigation bar*/  
+        .navbar {
+          width: 100%;
+          background-color: rgb(21, 196, 65);
+          overflow: auto;
+        }
+        
+        .navbar a {
+          float: left;
+          padding: 12px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .navbar a:hover {
+          background-color: rgb(70, 226, 148);
+        }
+        
+        .navbar a.active {
+          background-color:rgb(70, 226, 148);
+        }
+
+        div.box{
+            display: inline-block;
+            position:absolute;
+            margin: auto;
+            left: 0px;
+            right: 0;
+            top: 160%; /* Adjust this value to move the positioned div up and down */
+            text-indent: 50px;
+            width: 700px; /* Set the width of the positioned div */
+        }
+        .text{
+            position: relative;
+            left: 100px;
+            top:85%;
+            width: 350px;
+        }
+
+  .right {
+  position: absolute;
+  right: 100px;
+  top: 263%;
+  width: 600px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 375px) {
+  .bg-image{height: 11%;width: 180%;position: relative;}
+  .bgtext{top: 0;}
+  .navbar{width: 180%;}
+  .right{top: 310%;left: 10%;}
+  p{padding: 0 30px 20px;line-height: 22px;font-size: 16px;}
+  img{max-width: 100%; height: auto;}
+}
+    </style>
+
+    <body>
+      <div class="bg-image"></div>
+      <div class="bgtext">
+        <h1 style="font-size:4.5vw;font-family: 'Courier New', Courier, monospace;"><img src ="images/logo1.png" alt="logo" style = "width: 50px;height: 40px;">Food N Travel</h1>
+      </div>
+
+      <div class="navbar" id="mynavbar">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="about.html"><i class="fa fa-fw fa-search"></i> About</a---> 
+            <a href="travel.html"><i class="fa fa-fw fa-plane"></i> Destinations</a> 
+            <a href="gallarey.html"><i class="fa fa-fw fa-camera-retro"></i> Gallarey</a>
+            <a href="food.html"><i class='fa fa-cutlery'></i> Recepies</a> 
+            <a href="contact1.html"><i class="fa fa-fw fa-user"></i> Contact Us</a> 
+      </div>
+      <br><br>
+      <h1 style="text-align: center;color: rgba(126, 53, 53, 0.459);">MAPLE AND LEMON CHICKEN MARINADE</h1>
+      <p style="text-align: center;font-size: 20px;font-family: cursive;"><i>It only takes a couple of minutes to get this spectacular marinade together for whole or jointed chicken.</i></p><br><br>
+
+      <div>
+      <img style="width: 750px;height: 600px;text-align: center;margin-left: 20vw;" src="images/maple.jpg">
+      <div class="box"><br><br>
+      <p style="text-align:left;font-size: 20px;font-family:'Courier New', Courier, monospace ;">It takes 5 minutes, if that, to get this
+      chicken marinade together before you abandon it to a night in the fridge. The next day, all you need to do is slip everything into
+      a roasting tin and slide it in the oven. While the work is minimal, the flavour delivers maximum impact: sweet and smoky, gently
+      spiced and brightened with lemon.<br><br>
+
+      The particular chicken you use is entirely up to you. For two people I use a small bird, something around the 700g (1 1/2 lb) mark,
+      and spatchcock it, which is to say just remove the backbone with kitchen shears and lay it out flat.<br><br>
+        
+      The quantities below will work fine for a jointed chicken or other pieces as well, use this marinade with all wings, all drumsticks
+      and all thighs. It could easily use these quantities with enough chicken of your choice to feed up to 4 or 5 people very
+      comfortably; just double up if you're feeding a crowd or working with a very large bird.<br><br>
+      </p><hr></div><br><br>
+       </div> 
+
+       <h3 style="text-indent: 100px;position: relative;top:90%;color: rgba(126, 53, 53, 0.459);">MAPLE AND LEMON CHICKEN MARINADE</h3><br><br>
+       <div class="text">
+       <p style="font-size:20px;font-family: monospace;"><b><i>
+        Serves 4.<br><br>
+        1 chicken or chicken pieces<br>
+        1 lemon<br>
+        4 tablespoons maple syrup<br>
+        2 tablespoons soy sauce<br>
+        2 tablespoons vegetable oil<br>
+        2 cloves garlic<br>
+        2 star anise <br> </b></i> </p>
+        </div>
+
+    <div class="right">
+      <p style="font-size: 20px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Put the chicken into a large, resealable plastic bag.
+     Grate in the zest of the lemon, then cut it in half and add the juice. Put the reamed out lemon halves in the bag as well.<br><br>
+
+    Measure in the maple syrup, soy sauce, and vegetable oil. Don't peel the garlic cloves - just crush beneath the flat side of a knife
+    and throw them in, along with the star anise.<br><br>
+        
+    Seal the bag up, smoosh everything together to coat the chicken and put it in the fridge to marinate, anywhere from 6 to 24 hours.<br><br>
+        
+    When you're ready to cook, set your oven to 200 deg Celsius (400 deg Fahrenheit). Tip the chicken and everything else in the bag into a roasting tin and
+    roast for 40 minutes or until properly cooked through.<br><br></p>
+    <hr>
+      <p style="font-size:15px; font-family: 'Courier New', Courier, monospace; margin-left: 50%;">This recepie is taken from aforkandapencil.com</p>
+    </div>
+
+    </body>
+</html>

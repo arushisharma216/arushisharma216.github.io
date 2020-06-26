@@ -1,0 +1,321 @@
+<html>
+  <head>
+      <title>Food and Travel</title>
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body,html {height: 100%;font-family: Arial, Helvetica, sans-serif; margin:0}
+* {box-sizing: border-box}
+
+.bg-image {
+  /* The image used */
+  background-image: url("images/mauritius.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
+  /* Full height */
+  height: 20%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  /* Position text in the middle of the page/image */
+.bgtext {
+  color: rgb(120, 66, 248);
+  font-weight: bold;
+  position: absolute;
+  top: -4%;
+  left: 5%;
+  transform: translate(-5%, -5%);
+  text-align: left;
+}
+
+/*------------------ navigation bar --------------------------*/  
+        .navbar {
+          width: 100%;
+          background-color: rgb(21, 196, 65);
+          overflow: auto;
+        }
+        .navbar a {
+          float: left;
+          padding: 12px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }        
+        .navbar a:hover {
+          background-color: rgb(70, 226, 148);
+        }       
+        .navbar a.active {
+          background-color:rgb(70, 226, 148);
+        }
+        /* Hide the link that should open and close the topnav on small screens */
+        .navbar .icon{
+          display: none;
+        }
+
+/*------bottom text on image---*/
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  color: aliceblue;
+  font-size: 50px;
+  bottom: 10%;
+  left: 16px;
+}
+
+    .box{
+        position: relative;
+        display: inline-block; /* Make the width of box same as image */
+    }
+    .box .text{
+        position: absolute;
+        margin: 0 auto;
+        left: 10px;
+        right: 0;
+        top: 100%; /* Adjust this value to move the positioned div up and down */
+        /*text-indent: 70px;*/
+        width: 700px; /* Set the width of the positioned div */
+    }
+    
+  .column {
+  float: left;
+  width: 33%;
+  padding: 5px;
+  }
+  /* Clearfix (clear floats) */
+  .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+
+  .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+  .button {
+  background-color: rgba(10, 133, 116, 0.699); 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:40%;
+  margin-right: auto;
+  margin-top: 0%;
+  margin-bottom: 0%; 
+  cursor: pointer;
+  border-radius: 5px;
+  }
+.button:hover {
+  text-decoration: none;
+  background-color:rgb(135, 201, 190);
+  border-color: white;
+  color: black;
+}
+
+/*-------------------------small screen-------------------------------*/
+/* On smaller screens, decrease text size */
+/*average mobile*/
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .bg-image{height: 11%;width: 100%;position: relative;}
+  .bgtext{top: 0;}
+  .textcenter{height: 20%;}
+  .box{margin-left: -23%;}
+  .box .text{width: 360px;margin-left: 20%;}
+}
+</style>
+
+    <body>
+      <div class="bg-image"></div>
+      <div class="bgtext">
+        <h1 style="font-size:4.5vw;font-family: 'Courier New', Courier, monospace;"><img src ="images/logo1.png" alt="logo" style = "width: 50px;height: 40px;">Food N Travel</h1>
+      </div>
+
+      <div class="navbar" id="mynavbar">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="about.html"><i class="fa fa-fw fa-search"></i> About</a---> 
+            <a href="travel.html"><i class="fa fa-fw fa-plane"></i> Destinations</a> 
+            <a href="gallarey.html"><i class="fa fa-fw fa-camera-retro"></i> Gallarey</a>
+            <a href="food.html"><i class='fa fa-cutlery'></i> Recepies</a> 
+            <a href="contact1.html"><i class="fa fa-fw fa-user"></i> Contact Us</a> 
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a> 
+      </div>
+
+      <div class="container"></div>
+      <img src="images/france1.jfif" style="width:100%;height: 500px;">
+      <div class="bottom-left">#France</div>
+      <br><br><br>
+      <div class="box">
+        <img  style="width: 800px;height: 550px;margin-left: 100px;max-width: 80%;" src="images/france.jfif">
+        <div class="text">
+        <p style="font-size: 20px;">France seduces travellers with its unfalteringly familiar culture, woven around cafe terraces,
+        village-square markets and lace-curtained bistros with their plat du jour (dish of the day) chalked on the board.<br><br>
+        France is about world-class art and architecture. It seduces with iconic landmarks known the world over and rising stars yet to be
+        discovered. This country's cultural repertoire is staggering - in volume and diversity. And this is where the beauty of la belle
+        France lies: when superstars such as Mademoiselle Eiffel, royal Versailles and the celebrity-ridden French Riviera have been
+        ticked off, there's ample more to thrill. France is, after all, the world's top tourism destination with some 89 million
+        visitors each year who flock to the land of the Gauls to feast on its extraordinary wealth of museums, galleries, ateliers
+        (artist workshops) and hands-on cultural experiences.
+        </p><hr width="115%"><br>
+
+        <h1 style="text-indent: 0px;">Places to Go</h1>
+        <h2 style="text-indent:30px;"><u>Paris</u></h2>
+        <img  style="width: 700px;height: 750px;margin-left:0px;max-width: 100%;" src="images/paris.png">
+        <p style="font-size: 20px;">Paris' monument-lined boulevards, museums, classical bistros and boutiques are enhanced by a new wave
+        of multimedia galleries, creative wine bars, design shops and tech start-ups.<br><br>
+        The cloud-piercing, wrought-iron Eiffel Tower, broad Arc de Triomphe guarding the glamorous avenue des Champs-Elysees, flying
+        buttressed Notre Dame cathedral, lamplit bridges spanning the Seine and art nouveau cafes' wicker-chair-lined terraces are
+        enduring Parisian emblems. Despite initial appearances, however, Paris' cityscape isn't static: there are some stunning modern
+        and contemporary icons, too, from the inside-out, industrial-style Centre Pompidou to the mur vegetal (vertical garden) gracing
+        the Musee du Quai Branly, the glass sails of the Fondation Louis Vuitton contemporary-art centre, and the gleaming steel
+        egg-shaped concert venue La Seine Musicale.</p><br>
+        <h3 style="text-indent:30px;">Artistic Treasures</h3>
+        <p style="font-size: 20px;">With an illustrious artistic pedigree - Renoir, Rodin, Picasso, Monet, Manet, Dali and Van Gogh are
+         but a few of the masters who have lived and worked here over the years - Paris is one of the world's great art repositories,
+         harbouring treasures from antiquity onwards. In addition to big hitters like the incomparable Louvre, the Musee d'Orsay's
+         exceptional impressionist collection, and the Centre Pompidou's cache of modern and contemporary art, scores of smaller museums
+         showcase every imaginable genre, a diverse range of venues mount major exhibitions through to offbeat installations, and there's
+         also the city's vibrant street art.</p>
+         <div class="row">
+          <div class="column">
+            <img src="images/paris1.jfif" style="width:104%;margin-left: -10px;">
+          </div>
+          <div class="column">
+            <img src="images/paris2.png" style="width:100%;">
+          </div>
+          <div class="column">
+            <img src="images/paris3.jfif" style="width:100%;">
+          </div>
+        </div><br></p><hr width="115%"><br>
+
+        <h2 style="text-indent:30px;"><u>Bordeaux </u></h2>
+        <img  style="width: 700px;height: 750px;max-width: 100%;" src="images/Bordeaux.jfif">
+        <p style="font-size: 20px;">An intoxicating cocktail of 18th-century savoir-faire, millennial hi-tech and urban street life,
+         France's sixth largest city is among Europe's most exciting and gutsy players.<br>
+         This is the world's largest urban World Heritage Site, cradling half the city (18 sq km) in its Unesco-listed treasure chest.
+         From the elegant symmetry of place de la Bourse, palaces strung with stone-sculpted mascarons (faces), to tree-shaded boulevards
+         laced with hôtels particuliers (mansions) built for 18th-century wine merchants, Bordeaux architecture is world-class.
+         Contemporary architects continue the trend for excellence, with breathtakingly wild and beautiful creations resembling giant
+         wine decanters, gleaming white pebbles, all sorts. An interesting portfolio of art museums embracing all periods and genres
+         is the icing on the cake to this magnificent architectural heritage.</p><br>
+         <img  style="width: 900px;height: 750px;max-width: 100%;" src="images/wineyard.png">
+         <h3 style="text-indent:30px;">Gastronomy & Fine Wine</h3>
+         <p style="font-size: 20px;">This is a wine capital hemmed in by green, sun-drenched vineyards. Viticulture here is an ancient
+         art and tradition bearing its own unique trademarks and no other vineyards in the world produce as much fine wine. Best up, from
+         celebrated premiers crus aged for years to the very first vin nouveau cracked open at festivals after the autumnal harvest,
+         degustation (tasting) is an intrinsic part of daily life. Paired with the city's exceptional dining scene - a sassy mix of
+         traditional French kitchens, experimental neobistros, creative fusion restaurants, food trucks and barista-run coffee shops -
+         there is no tastier marriage. Sante!</p><br>
+         <h3 style="text-indent:30px;">Bordelais Art de Vivre</h3>
+         <p style="font-size: 20px;">It's hard to believe that this was a city that fell under British rule for three hundred years (from
+         the coronation of Henry of Aquitaine as King Henry II of England in 1152). Staunchly Bordelais to the last breath, Bordeaux
+         enjoys an overwhelming sense of local pride and savoir faire. Innovation is her middle name and a high-spirited, university-student
+         population bolsters the compelling undercurrent of creativity rippling through the city. Peppering a tramline with monumental pieces
+         of contemporary art, partying in a WWII submarine bunker, and dancing on a barge at the industrial wet docks is all second nature to
+         this natural bon vivant.</p><br>
+         <hr width="115%">
+
+         <h2 style="text-indent:50px;font-size:150%;" class="accordion"><u>Famous Food</u></h2>
+         <div class="panel">
+          <h3>Croque monsieur</h3>
+          <img  style="width: 650px;height: 450px;max-width: 100%;" src="images/francefood1.jpg"><br><br>
+          <p style="font-size: 20px;">Although it seems like nothing more than a simple sandwich, the buttery, cheesy taste of a croque 
+            monsieur is deliciously unique. Chefs stack ham, Gruyere cheese, and mustard between two thick pieces of buttered toast; 
+            the addition of an egg on top transforms the dish into a croque madame.</p><br><br>
+
+          <h3>Gratin Dauphinois</h3>
+          <img  style="width: 650px;height: 450px;max-width: 100%;" src="images/francefood2.jpg"><br><br>
+          <p style="font-size: 20px;">Also hailing from the south of France, gratin dauphinois is a made of sliced potatoes baked in milk 
+            and cream. The classic French comfort food often comes topped with garlic, shallots, and a bit of cheese.</p><br><br>
+         </div>
+
+          <hr width="115%">
+            <p><a class="button"href="https://www.google.com/travel/hotels">Travel To France</a></p><br><br>
+        </div>
+    </div>
+    <script>
+       /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      function myFunction() {
+      var x = document.getElementById("mynavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+          x.className = "navbar";
+         }
+      }
+
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      </script>
+</body>
+</html>

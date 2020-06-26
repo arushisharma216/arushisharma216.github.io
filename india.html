@@ -1,0 +1,370 @@
+<html>
+    <head>
+        <title>Food and Travel</title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,html {height: 100%;font-family: Arial, Helvetica, sans-serif; margin:0}
+* {box-sizing: border-box}
+
+.bg-image {
+  /* The image used */
+  background-image: url("images/mauritius.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
+  /* Full height */
+  height: 20%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+  /* Position text in the middle of the page/image */
+.bgtext {
+  color: rgb(120, 66, 248);
+  font-weight: bold;
+  position: absolute;
+  top: -4%;
+  left: 5%;
+  transform: translate(-5%, -5%);
+  text-align: left;
+}
+
+/*------------------ navigation bar -------------------*/  
+        .navbar {
+          width: 100%;
+          background-color: rgb(21, 196, 65);
+          overflow: auto;
+        }
+        
+        .navbar a {
+          float: left;
+          padding: 12px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .navbar a:hover {
+          background-color: rgb(70, 226, 148);
+        }
+        
+        .navbar a.active {
+          background-color:rgb(70, 226, 148);
+        }
+        /* Hide the link that should open and close the topnav on small screens */
+        .navbar .icon{
+          display: none;
+        }
+
+    .textcenter{
+        color: rgb(17, 19, 19);
+        padding-top: 5%;
+        font-size: 40px;
+        text-align: center;
+        background-image: url(images/india2.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 30%;
+        }
+
+    .box{
+        position: relative;
+        display: inline-block; /* Make the width of box same as image */
+    }
+    .box .text{
+        position: absolute;
+        margin: 0 auto;
+        left: 10px;
+        right: 0;
+        top: 100%; /* Adjust this value to move the positioned div up and down */
+        width: 680px; /* Set the width of the positioned div */
+    }
+    
+  .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  }
+  /* Clearfix (clear floats) */
+  .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+
+  .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+  .button {
+  background-color: rgba(10, 133, 116, 0.699); 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:40%;
+  margin-right: auto;
+  margin-top: 0%;
+  margin-bottom: 0%; 
+  cursor: pointer;
+  border-radius: 5px;
+  }
+.button:hover {
+  text-decoration: none;
+  background-color:rgb(135, 201, 190);
+  border-color: white;
+  color: black;
+}
+
+/*-------------------------small screen-------------------------------*/
+/* On smaller screens, decrease text size */
+/*average mobile*/
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .bg-image{height: 11%;width: 100%;position: relative;}
+  .bgtext{top: 0;}
+  .textcenter{height: 20%;}
+  .box{margin-left: -23%;}
+  .box .text{width: 360px;margin-left: 20%;}
+}
+</style>
+    <body>
+
+      <div class="bg-image"></div>
+      <div class="bgtext">
+        <h1 style="font-size:4.5vw;font-family: 'Courier New', Courier, monospace;"><img src ="images/logo1.png" alt="logo" style = "width: 50px;height: 40px;">Food N Travel</h1>
+      </div>
+
+      <div class="navbar" id="mynavbar">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="about.html"><i class="fa fa-fw fa-search"></i> About</a---> 
+            <a href="travel.html"><i class="fa fa-fw fa-plane"></i> Destinations</a> 
+            <a href="gallarey.html"><i class="fa fa-fw fa-camera-retro"></i> Gallarey</a>
+            <a href="food.html"><i class='fa fa-cutlery'></i> Recepies</a> 
+            <a href="contact1.html"><i class="fa fa-fw fa-user"></i> Contact Us</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>  
+      </div>
+
+      <div>
+        <p class="textcenter">#INDIA</p>
+      </div><br><br>
+    <div class="box">
+        <img  style="width: 750px;height: 750px;margin-left: 100px;max-width: 80%;" src="images/india3.jpg">
+        <div class="text">
+            <p style="font-size: 20px;">India's landscapes are as fantastically varied as its cultural traditions. From the snow-dusted 
+                peaks of the Himalaya to the sun-splashed beaches of the tropical south, the country has a bounty of outdoor attractions.
+                You can scout for big jungle cats on scenic wildlife safaris, paddle in the shimmering waters of coastal retreats, take 
+                blood-pumping treks high in the mountains, or simply inhale pine-scented air on meditative forest walks. Among all these 
+                natural treasures is a wealth of architectural gems, from serene temples rising out of pancake-flat plains to crumbling 
+                forts peering over plunging ravines. 
+            </p>
+            <p style="font-size: 20px;">Indian cuisine is a scrumptious smorgasbord of regionally distinct recipes, each with their own 
+                traditional preparation techniques and presentation styles - from the competing flavours of masterfully marinated meats 
+                and thalis (plate meals) to the simple splendour of vegetarian curries and deep-sea delights. Spices lie at the heart of 
+                Indian cooking, with the crackle of cumin seeds in hot oil a familiar sound in most kitchens. The country is also renowned 
+                for its tempting array of street food, with vendors selling everything from spicy samosas and kebabs to cooling kulfi 
+                (ice cream) and lassi (yoghurt drink).
+            </p>
+            <hr width="115%">
+
+            <h1 style="text-indent: 0px;">Places to Go</h1>
+            <h2 style="text-indent:30px;"><u>Jaisalmer</u></h2>
+            <img  style="width: 700px;height: 750px;margin-left:-5px;max-width: 100%;" src="images/india4.jpg">
+            <p style="font-size: 20px;">In the remote westernmost corner of Rajasthan, Jaisalmer is the quintessential desert town, its 
+              golden, sand-coloured ramparts rising out of the arid Thar like a scene from the Arabian Nights. Rampant commercialism may 
+              have dampened the romantic vision somewhat, but even with all the touts and tour buses, the town deservedly remains one of 
+              India's most popular destinations. Villagers dressed in voluminous red and orange turbans still outnumber foreigners in the 
+              bazaar, while the exquisite sandstone architecture of the "Golden City" is quite unlike anything else in India.
+              The streets of Jaisalmer are flanked with numerous pale honey-coloured facades, covered with latticework and floral designs, 
+              but the city's real showpieces are its havelis, commissioned by wealthy merchants during the eighteenth and nineteenth centuries.
+            </p>
+          
+            <div class="row">
+              <div class="column">
+                <img src="images/india5.jpg" style="width:106%; margin-left: -10px;">
+              </div>
+              <div class="column">
+                <img src="images/india6.jpg" style="width:100%;">
+              </div>
+              <div class="column">
+                <img src="images/india7.jpg" style="width:100%;">
+              </div>
+            </div><br>
+
+            <h2 style="text-indent:50px;"><u>Taj Mahal</u></h2>
+            <img  style="width: 700px;height: 650px;max-width: 100%;" src="images/india8.jpg">
+            <p style="font-size: 20px;">The site recognised world-over, the Taj Mahal is one of the world’s greatest buildings and the 
+              ultimate symbol of love. Emperor Shah Jahan was the mind behind the grand design in order to enshrine his favourite wife, 
+              Arjumand Bann Begum, also known as Mumtaz Mahul, "Chosen One of the Palace". The best time to see the Taj Mahal is in the 
+              early morning with relatively few crowds while the palace is drenched in a soft red glow.
+            </p>
+            <p style="font-size: 20px;">The magic of the monument is strangely undiminished by the crowds of tourists who visit, as small 
+              and insignificant as ants in the face of the immense mausoleum. That said, the Taj is at its most alluring in the relative 
+              quiet of early morning, shrouded in mist and bathed with a soft red glow. As its vast marble surfaces fall into shadow or 
+              reflect the sun, its colour changes from soft grey and yellow to pearly cream and dazzling white. This play of light is an 
+              important decorative device, symbolically implying the presence of Allah, who is never represented in physical form. To 
+              really appreciate it fully however, you'd have to stick around from dawn until dusk.
+            </p>
+            <img  style="width: 1000px;height: 700px;max-width: 100%;" src="images/india9.jpg">
+            <p style="font-size: 20px;">At the far end of the charbagh, steps lead up to the high-square marble platform on which the 
+              mausoleum itself sits, each corner marked by a tall, tapering minaret. To the west of the tomb is a domed red-sandstone 
+              mosque and to the east a replica jawab, put there to complete the architectural symmetry of the complex - it cannot be used 
+              as a mosque as it faces away from Mecca.
+            </p><br>
+
+            <h2 style="text-indent:50px;"><u>Varanasi</u></h2>
+            <img  style="width: 900px;height: 650px;max-width: 100%;" src="images/india10.jpg"><br><br>
+            <p style="font-size: 20px;">Varanasi is known as the City of Light and is one of the oldest living cities in the world. Its 
+              history is steeped in Hinduism and it remains a place of holy significance - in its location alongside the Ganges river, 
+              thousands of pilgrims and residents come for their daily ablutions to the large stone ghats.</p><br>
+              <p style="font-size: 20px;">The great Hindu city of Varanasi, also known as Banaras or Benares, stretches along the River 
+                Ganges, its waterfront dominated by long flights of stone ghats where thousands of pilgrims and residents come for their 
+                daily ritual ablutions. Known to the devout as Kashi, the Luminous - the City of Light, founded by Shiva - Varanasi is 
+                one of the oldest living cities in the world. It has maintained its religious life since the sixth century BC in one 
+                continuous tradition, in part by remaining outside the mainstream of political activity and historical development of 
+                the Subcontinent, and stands at the centre of the Hindu universe, the focus of a religious geography that reaches from 
+                the Himalayan cave of Amarnath in Kashmir to India's southern tip at Kanyakumari, Puri to the east, and Dwarka to the 
+                west. Located next to a ford on an ancient trade route, Varanasi is among the holiest of all tirthas - "crossing places", 
+                that allow the devotee access to the divine and enable gods and goddesses to come down to earth. It has attracted pilgrims, 
+                seekers, sannyasins and students of the Vedas throughout its history, including sages such as Buddha, Mahavira (founder 
+                of the Jain faith) and the great Hindu reformer Shankara.</p>  
+              <br>
+
+            <h2 style="text-indent:50px;"><u>Dharamsala</u></h2>
+            <img  style="width: 600px;height: 650px;max-width: 100%;;" src="images/india11.jpg"><br><br>
+            <p style="font-size: 20px;">Dharamsala is famous for being the home of the Dalai Lama and Tibetan government in exile. It's 
+              also a great jumping off point for exhilarating hikes around the Himalayas. Actually two separate towns, Dharamsala and 
+              McLeod Ganj, the latter has had an influx of Tibetan refugees, resulting in many temples, monasteries, meditation centres 
+              and more.</p>
+              <p style="font-size: 20px;">Ruffled by the lower ridges of the Shivalik Range in the far south, cut through by the Pir 
+                Panjal and Dhauladhar ranges in the northwest, and dominated by the great Himalayas in the north and east, Himachal 
+                Pradesh (HP) is India's most popular and easily accessible hill state. Sandwiched between the Punjab and Tibet, its 
+                lowland orchards, subtropical forests and maize fields peter out in the higher reaches where pines cling to the steep 
+                slopes of mountains whose inhospitable peaks soar in rocky crags and forbidding ice fields to heights of more than 6000m.
+              </p><br> 
+              <img  style="width: 700px;height: 500px;max-width: 100%;;" src="images/india12.jpg"><br><br>  
+              <p style="font-size: 20px;">Despite heavy snows and low temperatures between December and March, McLeod Ganj receives 
+                visitors throughout the year. Summer brings torrential rains – this being the second wettest place in India - that return 
+                in bursts for much of the year. Daytime temperatures can be high, but you'll need warm clothes for the chilly nights.</p>
+                <br>
+            <hr width="115%">
+
+            <h2 style="text-indent:40px;font-size:150%;" class="accordion"><u>Famous Food</u></h2>
+            <div class="panel">
+            <h3>Pani Puri</h3>
+            <img  style="width: 800px;height: 550px;max-width: 100%;;" src="images/indiafood1.jpg"><br><br>
+            <p style="font-size: 20px;">Panipuri is a street snack that is extremely popular in India, Bangladesh, Pakistan, and Nepal. 
+              Small in size, it consists of a hollow puri that is fried until crispy, then stuffed with a combination of flavored water 
+              called pani, tamarind chutney, chaat masala, potatoes, onions, hot chillis, and chickpeas.<br><br>
+              In North India, panipuri is known as golgappa, gol referring to the crispy shell, and gappa referring to the eating process, 
+              since these small snacks are typically eaten one at a time. It is believed that panipuri originated in Uttar Pradesh and gradually 
+              spread in popularity throughout the country and outside of it.</p><br>
+
+            <h3>Gulab Jamun</h3>
+            <img  style="width: 900px;height: 500px;max-width: 100%;;" src="images/indiafood2.jpg"><br><br>
+            <p style="font-size: 20px;">Gulab jamun is a dessert based on milk solids that are kneaded into a dough, shaped into balls, 
+              and deep-fried in ghee. The balls then get soaked in a sugary concoction flavored with saffron, green cardamom, and rose 
+              water. When served, gulab jamun is often garnished with dried nuts to further enhance its flavors.<br><br>
+              The name of the dish is derived from two words: gulab, meaning rose, and jamun, referring to the purple-colored jamun berry 
+              fruit. It is believed that the dessert originated from an Arabic dessert called luqmat al-qadi, which became popular during 
+              the Mughal era, when Indian cooks at the palace kitchens adapted their cuisine by combining the newly arrived Persian 
+              ingredients with their own Hindu flavors.<br><br>
+              Nowadays, gulab jamun is often prepared for weddings and during the Diwali festival, both in India and in Trinidad and 
+              Tobago, where gulab jamun is also quite popular.</p><br>
+
+            <h3>Masala Dosa</h3>
+            <img  style="width: 900px;height: 500px;max-width: 100%;;" src="images/indiafood3.jpg"><br><br>
+            <p style="font-size: 20px;">A traditional southern Indian dish known as masala dosa is popular throughout the country, made 
+              from a batter of soaked rice and lentils that is baked into a thin pancake and usually stuffed with potatoes, onions, and 
+              mustard seeds. The dish is often garnished with grated coconut and chopped coriander.<br><br>
+              With its huge popularity, there are also some variations of the dish, such as mysore masala dosa, rava masala dosa, onion 
+              masala dosa, and paper masala dosa. It is usually consumed as a quick snack or as a part of any meal of the day.
+            </p>
+            </div>
+
+            <hr width="115%">
+            <p><a class="button"href="https://www.google.com/travel/hotels">Travel To India</a></p><br><br>
+        </div>
+    </div>
+    <script>
+       /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+       function myFunction() {
+      var x = document.getElementById("mynavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+          x.className = "navbar";
+         }
+      }
+
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      </script>      
+</body>
+</html>

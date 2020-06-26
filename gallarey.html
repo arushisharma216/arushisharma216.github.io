@@ -1,0 +1,494 @@
+<html>
+    <head>
+        <title>Food and Travel</title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,html {height: 100%;font-family: Arial, Helvetica, sans-serif; margin:0}
+* {box-sizing: border-box}
+
+.bg-image {
+  /* The image used */
+  background-image: url("images/mauritius.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
+  /* Full height */
+  height: 20%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+  /* Position text in the middle of the page/image */
+.bgtext {
+  color: rgb(120, 66, 248);
+  font-weight: bold;
+  position: absolute;
+  top: -4%;
+  left: 5%;
+  transform: translate(-5%, -5%);
+  text-align: left;
+}
+
+/*------------------------------- navigation bar -----------------------------------*/  
+        .navbar {
+          width: 100%;
+          background-color: rgb(21, 196, 65);
+          overflow: auto;
+        }
+        
+        .navbar a {
+          float: left;
+          padding: 12px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .navbar a:hover {
+          background-color: rgb(70, 226, 148);
+        }
+        
+        .navbar a.active {
+          background-color:rgb(70, 226, 148);
+        }
+        /* Hide the link that should open and close the topnav on small screens */
+        .navbar .icon{
+          display: none;
+        }
+
+  .bg-image2 {
+  /* The image used */
+  background-image: url("images/pic7.jpg");
+  
+  /* Add the blur effect */
+  filter: brightness(50%);
+  -webkit-filter: brightness(40%);
+  -moz-filter: brightness(60%);
+  height: 60%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Position text in the middle of the page/image */
+.bgtext2 {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  font-weight: bold;
+  border: 3px #f1f1f1;
+  position: relative;
+  top: -45%;
+  left:10%;
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/*---------------------------------------Images-----------------------*/
+.row > .column {
+  padding: 0 8px;
+  padding-bottom: 14px;
+  
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity/see-through */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 60%;
+  max-width: 1400px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*-------------------------small screen-------------------------------*/
+/* On smaller screens, decrease text size */
+/*average mobile*/
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .bg-image{height: 11%;width: 100%;position: relative;}
+  .bgtext{top: 0;}
+  .column{width: 80%;margin-left: 40px;}
+}
+    </style>
+    <body>
+
+      <div class="bg-image"></div>
+      <div class="bgtext">
+        <h1 style="font-size:4.5vw;font-family: 'Courier New', Courier, monospace;"><img src ="images/logo1.png" alt="logo" style = "width: 50px;height: 40px;">Food N Travel</h1>
+      </div>
+
+      <div class="navbar" id="mynavbar">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="about.html"><i class="fa fa-fw fa-search"></i> About</a---> 
+            <a href="travel.html"><i class="fa fa-fw fa-plane"></i> Destinations</a> 
+            <a class="active" href="#"><i class="fa fa-fw fa-camera-retro"></i> Gallarey</a>
+            <a href="food.html"><i class='fa fa-cutlery'></i> Recepies</a> 
+            <a href="contact1.html"><i class="fa fa-fw fa-user"></i> Contact Us</a> 
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a> 
+      </div>
+
+      <div class="bg-image2"></div>
+      <div class="bgtext2">
+        <p style="font-size: 50px;">Travel the World</p>
+      </div>
+      
+<!-----------------Images-------------->
+
+<div class="row">
+  <div class="column">
+    <img src="images/img_nature.jpg" style="width:100%;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/bali.jpg" style="width:100%;height: 40%;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/places1.jfif" style="width:100%;height: 40%;" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/places.jfif" style="width:100%; height: 40%;" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/places2.jfif" style="width:100%; height: 40%;" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/places3.jfif" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/places4.jfif" style="width:100%;height: 37%;" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/places5.jfif" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/places6.jfif" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/places7.jfif" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/places8.jfif" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <img src="images/img_nature.jpg" style="width:100%;">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/img_snow.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/img_mountains.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <img src="images/img_lights.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/bali.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/places1.jfif" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/places.jfif" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/places2.jfif" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/places3.jfif" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/places4.jfif" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/places5.jfif" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/places6.jfif" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/places7.jfif" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="images/places8.jfif" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="column">
+      <img class="demo cursor" src="images/img_nature.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/img_snow.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/bali.jpg" style="width:100%" onclick="currentSlide(5)" alt="Ocean">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/places1.jfif" style="width:100%" onclick="currentSlide(6)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/places.jfif" style="width:100%" onclick="currentSlide(7)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/places2.jfif" style="width:100%" onclick="currentSlide(8)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/places3.jfif" style="width:100%" onclick="currentSlide(9)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/places4.jfif" style="width:100%" onclick="currentSlide(10)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/places5.jfif" style="width:100%" onclick="currentSlide(11)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/places6.jfif" style="width:100%" onclick="currentSlide(12)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/places7.jfif" style="width:100%" onclick="currentSlide(13)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/places8.jfif" style="width:100%" onclick="currentSlide(14)">
+    </div>
+  </div>
+</div>
+<br>
+
+<script>
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+        var x = document.getElementById("mynavbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } 
+        else {
+          x.className = "navbar";
+        }
+      }
+
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+
+    </body>
+</html>

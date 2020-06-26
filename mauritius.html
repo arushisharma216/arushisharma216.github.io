@@ -1,0 +1,354 @@
+<html>
+  <head>
+      <title>Food and Travel</title>
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body,html {height: 100%;font-family: Arial, Helvetica, sans-serif; margin:0}
+* {box-sizing: border-box}
+
+.bg-image {
+  /* The image used */
+  background-image: url("images/mauritius.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
+  /* Full height */
+  height: 20%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+  /* Position text in the middle of the page/image */
+.bgtext {
+  color: rgb(120, 66, 248);
+  font-weight: bold;
+  position: absolute;
+  top: -4%;
+  left: 5%;
+  transform: translate(-5%, -5%);
+  text-align: left;
+}
+
+/*------------------------ navigation bar ---------------------*/  
+        .navbar {
+          width: 100%;
+          background-color: rgb(21, 196, 65);
+          overflow: auto;
+        }
+        
+        .navbar a {
+          float: left;
+          padding: 12px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .navbar a:hover {
+          background-color: rgb(70, 226, 148);
+        }
+        
+        .navbar a.active {
+          background-color:rgb(70, 226, 148);
+        }
+        /* Hide the link that should open and close the topnav on small screens */
+        .navbar .icon{
+          display: none;
+        }
+
+        .textcenter{
+          color: rgb(244, 247, 247);
+          padding-top: 5%;
+          font-size: 40px;
+          text-align: center;
+          background-image: url(images/mauritius11.jfif); 
+          height:200px;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+    .box{
+        position: relative;
+        display: inline-block; /* Make the width of box same as image */
+    }
+    .box .text{
+        position: absolute;
+        margin: 0 auto;
+        left: 10px;
+        right: 0;
+        top: 100%; /* Adjust this value to move the positioned div up and down */
+        /*text-indent: 70px;*/
+        width: 700px; /* Set the width of the positioned div */
+    }
+    
+  .column {
+  float: left;
+  width: 33%;
+  padding: 5px;
+  }
+  /* Clearfix (clear floats) */
+  .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+
+  .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+  .button {
+  background-color: rgba(10, 133, 116, 0.699); 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:40%;
+  margin-right: auto;
+  margin-top: 0%;
+  margin-bottom: 0%; 
+  cursor: pointer;
+  border-radius: 5px;
+  }
+.button:hover {
+  text-decoration: none;
+  background-color:rgb(135, 201, 190);
+  border-color: white;
+  color: black;
+}
+
+/*-------------------------small screen-------------------------------*/
+/* On smaller screens, decrease text size */
+/*average mobile*/
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .bg-image{height: 11%;width: 100%;position: relative;}
+  .bgtext{top: 0;}
+  .textcenter{height: 20%;}
+  .box{margin-left: -25%;}
+  .box .text{width: 370px;margin-left: 20%;}
+}
+</style>
+    <body>
+
+      <div class="bg-image"></div>
+      <div class="bgtext">
+        <h1 style="font-size:4.5vw;font-family: 'Courier New', Courier, monospace;"><img src ="images/logo1.png" alt="logo" style = "width: 50px;height: 40px;">Food N Travel</h1>
+      </div>
+
+      <div class="navbar" id="mynavbar">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="about.html"><i class="fa fa-fw fa-search"></i> About</a---> 
+            <a href="travel.html"><i class="fa fa-fw fa-plane"></i> Destinations</a> 
+            <a href="gallarey.html"><i class="fa fa-fw fa-camera-retro"></i> Gallarey</a>
+            <a href="food.html"><i class='fa fa-cutlery'></i> Recepies</a> 
+            <a href="contact1.html"><i class="fa fa-fw fa-user"></i> Contact Us</a> 
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a> 
+      </div>
+
+      <div>
+        <p class="textcenter">#Mauritius</p>
+      </div><br><br>
+        <div class="box">
+          <img  style="width: 800px;height: 550px;margin-left: 100px;max-width: 80%;" src="images/mauritius3.jpg">
+          <div class="text">
+          <p style="font-size: 20px;">Mauritius is arguably Africa's wealthiest destination, a tropical paradise with tons to do. Port Louis, 
+            the modern capital of this 38-mile by 29-mile island, is a bustling port with a revitalized waterfront and a busy market. But most 
+            visitors gravitate toward resort areas such as Mont Choisy, quiet Trou-aux-Biches and the more bustling Flic en Flac, popular with 
+            scuba divers. Riviere Noire is ideal for those looking for great deep-sea fishing.</p>
+          <p style="font-size: 20px;">Mauritius, so far away, yet so much at home... Mauritius, a sparkling crystal in the turquoise 
+            waters of the Indian Ocean, will fascinate you. The contrast of colours, cultures and tastes makes the island so charming that 
+            the scene is set for an unforgettable holiday.<br>
+            Here, you have the opportunity to experience unparalleled luxury: a level of refinement that is head and shoulders above that 
+            on offer in other tropical holiday destinations. Here, you will discover the true meaning of ‘beauty’ – a realisation that
+            will compel you to return to Mauritius’ shores time and again. Mauritius was named after Dutch Prince Maurice Van Nassau...</p>
+            <hr width="115%">
+
+          <h1 style="text-indent: 0px;">Places to Go</h1>
+          <h2 style="text-indent:30px;"><u>The West and South West</u></h2>
+          <img  style="width: 800px;height: 600px;margin-left:-20px;max-width: 100%;" src="images/mauritius4.jpg">
+          <p style="font-size: 20px;">The West and South-West coasts of Mauritius are the driest areas on the island. At first glance,
+             you could be forgiven for thinking you were in the African bush. Protected from the prevailing winds, the region boasts some 
+             superb hotels and lagoons calm enough for swimming, snorkelling, diving, water-skiing, kayaking, pedal boats and sailing 
+             activities.<br><br>
+            Head to Tamarin Bay, or to the world famous "One Eye" at Le Morne, where you can find the best waves for surfing. Le Morne is
+            also well known by kitesurfers due to the steady winds that blow in from the South-East and accelerate in this corner of the
+            island almost all year round.<br><br>
+            The West is where you'll find the lush Black River Gorges. You can spend the day visiting the different Nature Parks (Casela,
+            Gros Cailloux) in the region, going for walks, great activities for kids and taking in the stunning surroundings. There are 
+            even some tame African lions, giraffe and other animals to see.<br><br>
+            Do some shopping at the nearby shopping centres and why not try a karting race at Cascavelle? For a truly magical experience,
+            be sure to book a trip to Ile aux Benitiers and swim with wild dolphins!</p>
+            <h3 style="text-indent:0px;">Le Morne Brabant</h3>
+            <p style="font-size: 20px;text-indent: initial;">Some of the most beautiful hotels and golf courses are found at Le Morne. The oldest ones were 
+            established with the arrival of the first tourists on the island and have an authentic hostelry culture. There is something
+            for everyone; whether you prefer to walk along the kilometres of white sandy beaches, actively take part in sea sports,
+            or simply want to lounge around and rest. The southern part of Le Morne is 'The Place' to try kitesurfing, windsurfing and
+            surfing in the strong and steady south-east trade winds that gain momentum after crossing the high mountains of the Black 
+             River Gorges.</p>
+          <img  style="width: 800px;height: 600px;margin-left:10px;max-width:100%;" src="images/mauritius1.jpg"><br><br><hr width="110%">  
+
+          <h2 style="text-indent:50px;"><u>Port Louis, Capital of Mauritius</u></h2>
+          <img  style="width: 700px;height: 650px;margin-left:0px;max-width: 100%;" src="images/mauritius5.jpg">
+          <p style="font-size: 20px;">Port Louis, the cosmopolitan capital city of Mauritius was founded in 1735 by the French governor 
+            and pioneer Bertrand-François Mahé de La Bourdonnais. Located on the Northwest Coast, Port Louis is the administrative and 
+            business capital of the island.<br><br>
+            Buzzing with activity during the day, the city is full of cultural and historical treasures that should not be missed. Beyond 
+            the central market, which is a focal point for those who want to feel close to the soul of Mauritius, are many historic sites
+            including the Champ de Mars - the oldest race course in the southern hemisphere. </p><br>
+            <img  style="width: 1000px;height: 700px;margin-left:0px;max-width: 100%;" src="images/mauritius2.jpg">
+            <h3 style="text-indent:0px;">The Bank of Mauritius  Museum</h3>
+            <p style="font-size: 20px;text-indent: initial;">The Bank of Mauritius Museum is located in the country’s central bank 
+            original premises on Sir William Newton Street, Port Louis. The journey starts with the Arab period (12th century) and takes
+            us across the meanders of the centuries to present-day Mauritius. Visitors have the opportunity to look at coins minted
+            abroad by the then-colonial governments for use in Mauritius, and at gold or silver coins, like Arab dinars or British
+            Indian mohur, which were not in use in Mauritius but nevertheless found their way to our shores nonetheless by way of
+            the flourishing trade in the region during colonial times. The museum is open on weekdays only from 9:30 till 16:00; 
+            entrance is free for the time being. Guided tours are available to groups on request.</p><br>
+            <div class="row">
+              <div class="column">
+                <img src="images/mauritius6.jpg" style="width:100%;margin-left: -10px;">
+              </div>
+              <div class="column">
+                <img src="images/mauritius7.jpg" style="width:100%;margin-left: -10px;">
+              </div>
+              <div class="column">
+                <img src="images/mauritius8.jpg" style="width:85%;margin-left: -10px;">
+              </div>
+            </div><br><hr width="110%">
+
+          <h2 style="text-indent:50px;"><u>Inland & Center</u></h2>
+          <img  style="width: 1000px;height: 650px;max-width: 100%;" src="images/mauritius9.jfif"><br><br>
+          <p style="font-size: 20px;">Time to leave the usual beaches and try a few excursions inland to get a feel for the heart of
+           the island. Cooler than the coastal regions, the central plateau is situated between 400 and 600 meters above sea level. 
+           Starting from the South of Port Louis, this vast urban area is home to about 400,000 people, representing over one-third of
+           the island's population. High up on the plateau, you’ll also find forests, lakes and plantations that are well worth a visit.</p>
+           
+           <img  style="width: 800px;height: 700px;max-width: 100%;" src="images/mauritius10.jfif">
+           <h3 style="text-indent:0px;">Ganga Talao</h3>
+           <p style="font-size: 20px;text-indent: initial;">Not far from Mare aux Vacoas reservoir is Grand Bassin, also known as Ganga
+           Talao. It is one of the rare natural lakes in Mauritius, formed inside the crater of an extinct volcano and is the renowned 
+           pilgrimage place for Mauritians of Hindu faith. Every year in February, during the Maha Shivaratri week, thousands of Hindus 
+           walk miles from every corner of the island to bring their gifts for Lord Shiva at Grand Bassin.</p>
+
+           <h3 style="text-indent:0px;">Mahatma Gandhi Institute</h3>
+           <p style="font-size: 20px;text-indent: initial;">This museum evokes the influx of coolies who came to work as labourers after
+            the abolition of slavery in Mauritius in 1835.<br><br>
+            Working for a pittance, they gave a new impetus to a non-competitive sugar industry. In 1909, at the end of the Indian
+            immigration, they were 450,000.<br><br>
+            Today their descendants account for two-thirds of the Mauritian population. This well-documented folk museum shows in detail
+            the daily life of Indian workers during the nineteenth century.</p><br>
+            <hr width="100%">
+
+            <h2 style="text-indent:50px;font-size:150%;" class="accordion"><u>Famous Food</u></h2>
+            <div class="panel">
+            <h3>Dholl Puri & Roti</h3>
+            <img  style="width: 700px;height: 650px;margin-left:0px;max-width: 100%;" src="images/mauritiusfoo1.jpg"><br><br>
+            <p style="font-size: 20px;">Dholl Puri and Roti are definitely the favourite street foods of Mauritians. Both are Indian 
+              styled flatbreads, which can be found anywhere at street stalls and even some restaurants. A long line up of people on the 
+              street usually indicates a vendor, where you will be able to pick your fillings and enjoy a very cheap, filling meal.<br><br>
+              These were introduced by the indentured labourers from Bihar, over a century ago. The ingredients used, especially for the dholl puri is what makes it uniquely Mauritian.
+              Dholl Puri is a flatbread stuffed with yellow split peas whereas Roti is simply a pancake-like flatbread. Both are toasted 
+              on a griddle, and are universal recipes that can be accompanied with anything. In Mauritius they are usually filled with 
+              butter bean curry (Gros Pois), a tomato based sauce (Rougaille), sauteed spinach and accompanied with a spicy coriander 
+              chutney or pickles.</p><br><br>
+
+            <h3>Mine Frite</h3>
+            <img  style="width: 700px;height: 650px;margin-left:0px;max-width: 100%;" src="images/mauritiusfood2.jpg"><br><br>
+            <p style="font-size: 20px;">Fried Noodles are not just a common dish throughout oriental Asia, but in Mauritius as well. The 
+              name Mine Frite is a combination of the Cantonese/Hakka word for noodles- Mein and the French word for fried- Frite. Locally 
+              known as Mine Frite, this dish is basically fried noodles cooked in a Mauritian style.<br><br>
+
+              Fresh noodles or egg noodles are tossed in a heated wok with cabbage, carrots, and other vegetables along with chicken, 
+              shrimp and sometimes thin strips of meat. The ingredients are seasoned with dark soy sauce, fish sauce, salt and pepper. 
+              It is topped off with strips of fried egg and accompanied with garlic sauce and chilli paste for those who like it spicy.<br><br>
+              It is a relatively easy and quick dish to make, but for those who don’t want the hassle, this dish is readily available 
+              everywhere on the island, from hotels, restaurants and street stalls.</p><br>
+            </div>
+
+            <hr width="100%">
+            <p><a class="button"href="https://www.google.com/travel/hotels">Travel To Mauritius</a></p><br><br>
+          </div>
+        </div>
+        <script>
+          /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+          function myFunction() {
+          var x = document.getElementById("mynavbar");
+          if (x.className === "navbar") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar";
+           }
+          }
+
+          var acc = document.getElementsByClassName("accordion");
+          var i;
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                panel.style.display = "none";
+              } else {
+                panel.style.display = "block";
+              }
+            });
+          }
+          </script>      
+    </body>
+</html>

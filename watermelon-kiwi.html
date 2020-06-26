@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Food and Travel</title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,html {height: 100%;font-family: Arial, Helvetica, sans-serif; margin:0}
+* {box-sizing: border-box}
+
+.bg-image {
+  /* The image used */
+  background-image: url("images/mauritius.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
+  /* Full height */
+  height: 20%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+  /* Position text in the middle of the page/image ------------Title of page------------------*/
+.bgtext {
+  color: rgb(120, 66, 248);
+  font-weight: bold;
+  position: absolute;
+  top: -4%;
+  left: 5%;
+  transform: translate(-5%, -5%);
+  text-align: left;
+}
+
+/* navigation bar*/  
+        .navbar {
+          width: 100%;
+          background-color: rgb(21, 196, 65);
+          overflow: auto;
+        }
+        
+        .navbar a {
+          float: left;
+          padding: 12px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .navbar a:hover {
+          background-color: rgb(70, 226, 148);
+        }
+        
+        .active {
+          background-color:rgb(70, 226, 148);
+        }
+
+        div.box{
+            display: inline-block;
+            position:absolute;
+            margin: auto;
+            left: 0px;
+            right: 0;
+            top: 160%; /* Adjust this value to move the positioned div up and down */
+            text-indent: 50px;
+            width: 700px; /* Set the width of the positioned div */
+        }
+        .text{
+            position: relative;
+            left: 100px;
+            top:15%;
+            width: 350px;
+        }
+
+  .right {
+  position: absolute;
+  right: 100px;
+  top: 190%;
+  width: 600px;
+  padding: 10px;
+}
+/* On smaller screens, decrease text size */
+/*average mobile*/
+@media only screen and (max-width: 375px) {
+  .bg-image{height: 11%;width: 180%;position: relative;}
+  .bgtext{top: 0;}
+  .navbar{width: 180%;}
+  .right{top: 230%;left: 10%;}
+  p{padding: 0 30px 20px;line-height: 22px;font-size: 16px;}
+  img{max-width: 100%; height: auto;}
+}
+    </style>
+
+    <body>
+      <div class="bg-image"></div>
+      <div class="bgtext">
+        <h1 style="font-size:4.5vw;font-family: 'Courier New', Courier, monospace;"><img src ="images/logo1.png" alt="logo" style = "width: 50px;height: 40px;">Food N Travel</h1>
+      </div>
+
+      <div class="navbar">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="about.html"><i class="fa fa-fw fa-search"></i> About</a---> 
+            <a href="travel.html"><i class="fa fa-fw fa-plane"></i> Destinations</a> 
+            <a href="gallarey.html"><i class="fa fa-fw fa-camera-retro"></i> Gallarey</a>
+            <a href="food.html"><i class='fa fa-cutlery'></i> Recepies</a> 
+            <a href="contact1.html"><i class="fa fa-fw fa-user"></i> Contact Us</a> 
+      </div>
+      <br><br>
+      <h1 style="text-align: center;color: rgba(126, 53, 53, 0.459);">WATERMELON AND KIWI POPSICLES</h1>
+      <p style="text-align: center;font-size: 20px;font-family: cursive;"><i>Refreshing watermelon kiwi pops are perfect for hot days!</i></p><br><br>
+
+      <div>
+      <img style="width: 600px;height: 600px;text-align: center;margin-left: 30vw;" src="images/popsicles.jpg">
+      <div class="box"><br><br>
+      <p style="text-align:left;font-size: 20px;font-family:'Courier New', Courier, monospace ;"><br>
+      <hr></div><br><br>
+      </div> 
+
+       <h3 style="text-indent: 100px;position: relative;top:20%;color: rgba(126, 53, 53, 0.459);">WATERMELON AND KIWI POPSICLES</h3><br><br>
+       <div class="text">
+       <p style="font-size:20px;font-family: monospace;"><b><i>
+        Serves 8.<br><br>
+
+        3 1/2 cups seedless watermelon cubes<br>
+        3 kiwi peeled and sliced<br>
+        4 teaspoons sugar optional,<br> amount may vary based on your kiwi </p>
+        </div>
+
+        <div class="right">
+            <p style="font-size: 20px;font-family:sans-serif;">Put the watermelon cubes in a blender, and blend on high until smooth.<br><br>
+                Pour watermelon into popsicle molds, filling each one about two-thirds full.<br><br>
+                Place sticks in the molds and freeze until watermelon is firm, about 2 hours.<br><br>
+                Place the kiwi and sugar in the blender and blend on high until smooth.<br><br>
+                Pour the kiwi mixture into the popsicle molds.<br><br>
+                Freeze for at least 4 hours.<br><br>
+                This recipe made eight popsicles using this mold. If you have a smaller popsicle mold, just reduce the amount of fruit, or make it all and drink the leftovers.<br><br></p>
+            <hr>
+            <p style="font-size:15px; font-family: 'Courier New', Courier, monospace; margin-left: 50%;">This recepie is taken from theprettybee.com</p>
+            </div>      
+
+    </body>
+</html>

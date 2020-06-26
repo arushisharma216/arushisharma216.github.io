@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Food and Travel</title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,html {height: 100%;font-family: Arial, Helvetica, sans-serif; margin:0}
+* {box-sizing: border-box}
+
+.bg-image {
+  /* The image used */
+  background-image: url("images/mauritius.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
+  /* Full height */
+  height: 20%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+  /* Position text in the middle of the page/image */
+.bgtext {
+  color: rgb(120, 66, 248);
+  font-weight: bold;
+  position: absolute;
+  top: -4%;
+  left: 5%;
+  transform: translate(-5%, -5%);
+  text-align: left;
+}
+
+/*------------------------ navigation bar-----------------------------------------*/
+        .navbar {
+          width: 100%;
+          background-color: rgb(21, 196, 65);
+          overflow: hidden;
+        }
+        
+        .navbar a {
+          float: left;
+          padding: 12px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .navbar a:hover {
+          background-color: rgb(70, 226, 148);
+        }
+        
+        .navbar a.active {
+          background-color:rgb(70, 226, 148);
+        }
+        /* Hide the link that should open and close the topnav on small screens */
+        .navbar .icon{
+          display: none;
+        }
+
+/*-------------------------------------------------------------------------*/
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 60px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active1, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*----------------Travel------------------------------*/
+.bg-image2 {
+  /* The image used */
+  background-image: url("images/pic1.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(2px);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(13px);
+  height: 50%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Position text in the middle of the page/image */
+.bgtext2 {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 160%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+/*-------------------------Food-------------------------------*/
+.bg-image3 {
+  /* The image used */
+  background-image: url("images/food3.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(2px);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(13px);
+  height: 55%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Position text in the middle of the page/image */
+.bgtext3 {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 215%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+/*-------------------------small screen-------------------------------*/
+/* On smaller screens, decrease text size */
+/*average mobile*/
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .prev, .next,.text{font-size: 40px}
+  .bgtext{top: 0;}
+  .bg-image{height: 11%;}
+  .bg-image3,.bg-image2{height: 35%;}
+  .bgtext2{top: 133%;}
+  .bgtext3{top: 170%;}
+}
+</style>
+    
+    <body>
+      <div class="bg-image"></div>
+      <div class="bgtext">
+        <h1 style="font-size: 4.5vw;font-family: 'Courier New', Courier, monospace;"><img src ="images/logo1.png" alt="logo" style = "width: 50px;height: 40px;">Food N Travel</h1>
+      </div>
+
+      <!-------------------Home bar------------------------------->
+        <div class="navbar" id="mynavbar">
+            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="about.html"><i class="fa fa-fw fa-search"></i> About</a> 
+            <a href="travel.html"><i class="fa fa-fw fa-plane"></i> Destinations</a> 
+            <a href="gallarey.html"><i class="fa fa-fw fa-camera-retro"></i> Gallarey</a>
+            <a href="food.html"><i class='fa fa-cutlery'></i> Recepies</a> 
+            <a href="contact1.html"><i class="fa fa-fw fa-user"></i> Contact Us</a> 
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>  
+    </div>
+    
+    <!-------------Images------------------------------------------------->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="images/bali.jpg" style="width:100%;height:600px;">
+        <div class="text" style="color:rgb(235, 183, 12);">World is full of surprises</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/pic4.jpg" style="width:100%;height:600px;">
+        <div class="text" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-shadow: 2px 2px mediumorchid; color:rgb(170, 5, 120);">Explore.<br> Dream.<br> Discover.</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/pic6.jpg" style="width:100%;height:600px;">
+        <div class="text" style="top:30%;text-align: end;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-shadow: 2px 2px cadetblue; color:rgb(240, 248, 243);">Explore the<br> Unseen</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/food.jpg" style="width:100%;height:600px;">
+        <div class="text" style="color:rgb(12, 226, 208);">Eat Good<br>Feel Good</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/food1.jpg" style="width:100%;height:600px;">
+        <div class="text" style="color:rgb(226, 140, 12);">Eat Real <br>Food</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span> 
+      </div>
+      
+      <!-------------Travel-------------------------->
+      <div class="bg-image2"></div>
+      <div class="bgtext2">
+        <a href="travel.html" style="color: white;"><h1 style="font-size: 50px;">Travel</h1></div></a>
+      </div>  <br>
+
+      <!-------------Food-------------------------->
+      <div class="bg-image3"></div>
+      <div class="bgtext3">
+        <a href="food.html" style="color: white;"><h1 style="font-size:50px;">Food</h1></div></a>
+      </div>  
+
+      <script>
+
+        var slideIndex = 1;
+        var timer = null;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          clearTimeout(timer);
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          clearTimeout(timer);
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n==undefined){n = ++slideIndex}
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active1", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          timer = setTimeout(showSlides, 15000); // Change image every 15 seconds
+        }
+
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      function myFunction() {
+        var x = document.getElementById("mynavbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+        </script>
+        
+    </body>
+</html>
